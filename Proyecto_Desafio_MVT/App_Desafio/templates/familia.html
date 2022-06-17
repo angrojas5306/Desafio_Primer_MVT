@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+  	<title>Familia:</title>
+
+    <meta charset="utf-8">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
+	</head>
+	<body>
+	<section>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h1></h1>
+					<h2 class="heading-section">MI FAMILIA:</h2>
+				</div>
+			</div>
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+						    <tr>
+						      <th>PARENTEZCO</th>
+						      <th>EDAD</th>
+						      <th>FECHA CUMPLE</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  	{% for familiar in familia %}
+						    <tr>
+						      <td>{{ familiar.parentezco }}</td>
+						      <td>{{ familiar.edad }}</td>
+						      <td>{{ familiar.fecha_cumpleanios }}</td>
+						    </tr>
+						  {% endfor%}
+						  </tbody>
+						</table>
+
+	</section>
+	</body>
+</html>
+
